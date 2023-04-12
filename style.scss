@@ -1,23 +1,51 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
 .pagecontainer {
   width: 100vw;
-  margin:0 auto;
-  border: 2px solid #2600df;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+
   @media screen and (min-width: 624px) {
     width: 90vw;
   }
+
   @media screen and (min-width: 768px) {
     width: 80vw;
   }
+
   @media screen and (min-width: 1024px) {
     width: 70vw;
   }
+
   @media screen and (min-width: 1536px) {
     width: 60vw;
+  }
+}
+
+.add-task-mobile-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  padding: 22px;
+  background-color: #00b4d8;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 0px -2px 15px #66d2e8;
+  transition: all 4s ease-in-out 0.5s;
+  font-family: 'DynaPuff', cursive;
+
+
+  @media screen and (min-width: 624px) {
+    bottom: -30000px;
   }
 }
