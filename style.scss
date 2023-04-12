@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+.pagecontainer {
+  width: 100vw;
+  margin:0 auto;
+  border: 2px solid #2600df;
+  @media screen and (min-width: 624px) {
+    width: 90vw;
+  }
+  @media screen and (min-width: 768px) {
+    width: 80vw;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 70vw;
+  }
+  @media screen and (min-width: 1536px) {
+    width: 60vw;
+  }
+}

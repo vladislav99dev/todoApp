@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.pagecontainer {
+  width: 100vw;
+  margin: 0 auto;
+  border: 2px solid #2600df;
+}
+@media screen and (min-width: 624px) {
+  .pagecontainer {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pagecontainer {
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pagecontainer {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .pagecontainer {
+    width: 60vw;
+  }
+}/*# sourceMappingURL=style.css.map */

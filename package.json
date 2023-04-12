@@ -20,5 +20,10 @@
   "homepage": "https://github.com/vladislav99dev/todoApp#readme",
   "dependencies": {
     "lite-server": "^2.6.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.62.0"
   }
 }
