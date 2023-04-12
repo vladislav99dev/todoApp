@@ -7,13 +7,40 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
-  <body class="pagecontainer">
-    <main>
-
-        <form action="#" class="task-modal">
-            
-        </form>
-
+  <body>
+    <div class="overlay"></div>
+    <main class="pagecontainer">
+      <form action="#" class="task-modal">
+        <h3>Add Task</h3>
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" />
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" />
+        <label for="description">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="4"
+        ></textarea>
+        <label for="status">Status</label>
+        <select name="status" id="status">
+            <option value="">Not Finished</option>
+            <option value="">Finished</option>
+          </select>
+        <label for="priority">Priority</label>
+        <select name="priority" id="priority">
+          <option value="">Low</option>
+          <option value="">Medium</option>
+          <option value="">High</option>
+        </select>
+        <button type="submit" class="submit-task">Submit Task</button>
+        <!-- author -->
+        <!-- description -->
+        <!-- status -->
+        <!-- date -->
+        <!-- priority -->
+      </form>
 
       <button class="add-task-mobile-button">ADD TASK</button>
     </main>
