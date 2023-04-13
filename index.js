@@ -1,11 +1,15 @@
-const addTaskBtn = document.getElementsByClassName("add-task-mobile-button")[0];
+const addTaskBtnMobile = document.getElementsByClassName("add-task-mobile-button")[0];
+const addTaskBtnDesktop = document.getElementsByClassName("add-task-desktop-button")[0];
+
 
 const addTaskBtnHandler = (e) => {
   e.preventDefault();
   const taskModal = document.getElementsByClassName("task-modal")[0];
   const overlay = document.getElementsByClassName("overlay")[0];
   overlay.addEventListener("click", () => {
-    overlay.classList.remove("display-overlay");
+    setTimeout(() => {
+      overlay.classList.remove("display-overlay");
+    }, 700);
     taskModal.classList.remove("show-task-modal");
     return;
   });
@@ -14,4 +18,5 @@ const addTaskBtnHandler = (e) => {
   return;
 };
 
-addTaskBtn.addEventListener("click", addTaskBtnHandler);
+addTaskBtnMobile.addEventListener("click", addTaskBtnHandler);
+addTaskBtnDesktop.addEventListener("click", addTaskBtnHandler);
