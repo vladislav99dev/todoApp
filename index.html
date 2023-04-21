@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="module" src="js/index.js"></script>
   </head>
   <body>
+    <!-- BG OVERLAY -->
     <div class="overlay"></div>
     <main class="pagecontainer">
+      <!-- HEADER -->
       <header class="header">
         <h2>Welcome to Vladislav Dorovski's</h2>
         <h1>Todo App</h1>
       </header>
+      <!-- DESKTOP BUTTON -->
       <div class="desktop-button-container">
-          <button class="add-task-desktop-button">Add Task</button>
+        <button class="add-task-desktop-button">Add Task</button>
       </div>
+      <!-- ADD TASK FORM -->
+
       <form action="#" class="task-modal">
         <h3>Add Task</h3>
         <label for="firstname">Firstname</label>
@@ -32,14 +38,14 @@
         ></textarea>
         <label for="status">Status</label>
         <select name="status" id="status">
-          <option value="">Not Finished</option>
-          <option value="">Finished</option>
+          <option value="not finished">Not Finished</option>
+          <option value="finished">Finished</option>
         </select>
         <label for="priority">Priority</label>
         <select name="priority" id="priority">
-          <option value="">Low</option>
-          <option value="">Medium</option>
-          <option value="">High</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
         </select>
         <button type="submit" class="submit-task">Submit Task</button>
         <!-- author -->
@@ -48,10 +54,16 @@
         <!-- date -->
         <!-- priority -->
       </form>
+      <!-- TASKS SECTION -->
 
+      <section class="tasks-container">
+        <div class="task-container"></div>
+        <div class="task-container"></div>
+      </section>
+
+      <!-- MOBILE ADD TASK BUTTON -->
       <button class="add-task-mobile-button">ADD TASK</button>
     </main>
 
-    <script src="index.js"></script>
   </body>
 </html>

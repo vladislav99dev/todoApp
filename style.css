@@ -6,19 +6,22 @@
   border: 0;
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
-  overflow: hidden;
 }
 
 body {
   position: relative;
 }
 
+/* .disable-scroll {
+  overflow-y: hidden;
+} */
+
 .overlay {
   background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   z-index: 10;
   display: none;
 }
@@ -31,10 +34,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #00242b;
 }
 
 header h1 {
   font-family: "DynaPuff", cursive;
+  color: #003641;
 }
 
 .desktop-button-container {
@@ -58,20 +63,23 @@ header h1 {
   font-family: "DynaPuff", cursive;
   font-size: 20px;
   transition: all 0.4s ease-in-out 0s;
-  background: linear-gradient(white, white) padding-box, linear-gradient(to right, #00b4d8, #4dcbe4, #80daec) border-box;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #00b4d8, #4dcbe4, #80daec) border-box;
   border: 2px solid transparent;
 }
 .add-task-desktop-button:hover {
-  background: linear-gradient(white, white) padding-box, linear-gradient(to right, #80daec, #00b4d8, #00b4d8) border-box;
-  box-shadow: 4px 4px 6px #003641;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #80daec, #00b4d8, #00b4d8) border-box;
+  box-shadow: 4px 4px 6px rgba(0, 54, 65, 0.4);
   padding: 12px 132px;
+  font-size: 22px;
 }
 
 .pagecontainer {
-  padding: 36px 0;
   width: 100vw;
   min-height: 100vh;
-  margin: 0 auto;
+  margin: auto;
+  padding-top: 36px;
   position: relative;
 }
 @media screen and (min-width: 640px) {
@@ -96,7 +104,7 @@ header h1 {
 }
 
 .add-task-mobile-button {
-  position: absolute;
+  position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -106,21 +114,27 @@ header h1 {
   color: #fff;
   font-size: 18px;
   box-shadow: 0px 2px 15px #003641;
-  transition: all 4s ease-in-out 0.5s;
+  transition: all 1s ease-in-out 0.2s;
   font-family: "DynaPuff", cursive;
 }
 @media screen and (min-width: 640px) {
   .add-task-mobile-button {
-    bottom: -30000px;
+    display: none;
+    bottom: -100%;
   }
+}
+
+.add-task-container {
+  height: 100vh;
+  width: 100vw;
 }
 
 .task-modal {
   color: #fff;
   position: absolute;
   padding: 24px 64px;
-  top: 50%;
-  left: -50%;
+  top: 50vh;
+  left: -100%;
   max-width: 600px;
   translate: -50% -50%;
   border-radius: 10px;
@@ -169,4 +183,28 @@ select {
   padding: 8px 24px;
   margin-top: 12px;
   border-radius: 10px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px 0px;
+  margin-top: 36px;
+}
+
+.task-container {
+  height: 600px;
+  width: 340px;
+  /* border: 1px solid #00b4d8; */
+  border-radius: 10px;
+  background: linear-gradient(
+    #00a2c2,
+    #00b4d8 33%,
+    #1abcdc,
+    #33c3e0 66%,
+    #4dcbe4,
+    #66d2e8 100%
+  );
+}

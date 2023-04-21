@@ -32,16 +32,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #00242b;
 }
 
 header h1 {
   font-family: 'DynaPuff', cursive;
+  color: #003641;
 }
 
 
 .desktop-button-container {
   display: none;
   padding: 12px;
+
   @media screen and (min-width: 640px) {
     display: flex !important;
     justify-content: center;
@@ -68,8 +71,9 @@ header h1 {
   &:hover {
     background: linear-gradient(white, white) padding-box,
       linear-gradient(to right, #80daec, #00b4d8, #00b4d8) border-box;
-    box-shadow: 4px 4px 6px #003641;
+    box-shadow: 4px 4px 6px rgb(0, 54, 65, 0.4);
     padding: 12px 132px;
+    font-size: 22px;
   }
 
 
@@ -77,10 +81,10 @@ header h1 {
 
 
 .pagecontainer {
-  padding: 36px 0;
   width: 100vw;
   min-height: 100vh;
-  margin: 0 auto;
+  margin:  auto;
+  padding-top: 36px;
   position: relative;
 
   @media screen and (min-width: 640px) {
